@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lb.memory.mapper.UserMapper">
+
+	<select id="selectAll" resultType="com.lb.memory.pojo.User">
+		select * from blog_users where uid=#{in};
+	</select>
+</mapper>

@@ -1,0 +1,791 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" +request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
+<html>
+<head>
+	<base href="<%=basePath%>">
+	<meta charset="UTF-8">
+	<title>Memory-Cloister Backend</title>
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/nav.js"></script>
+	<script type="text/javascript" src="./js/time.js"></script>
+	<script type="text/javascript" src="./js/data.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+	<div id="layout">
+		<header>
+			<div id="home">
+				<a href="javascript:void(0)" id="home_logo">
+					<i class="fa fa-paper-plane-o"></i>
+					<span>Memory-Cloister</span>
+				</a>
+				<a href="javascript:void(0)" id="home_aside-btn">
+					<i class="fa fa-navicon"></i>
+				</a>
+			</div>
+			<div id="header_container">
+				<div id="header_left">
+					<a href="javascript:void(0)" id="header_temp-btn">
+						<i class="fa fa-flag-o"></i>
+					</a>
+					<a href="javascript:void(0)" id="header_user-btn">
+						<i class="fa fa-user-o"></i>
+					</a>
+				</div>
+				<div id="header_search">
+					<form action="" method="post">
+						<input type="search" placeholder="Search..." id="header_search-content">
+						<button type="submit" id="header_search-btn">
+							<i class="fa fa-search"></i>
+						</button>
+					</form>
+				</div>
+				<div id="header_right">
+					<div id="header_notification">
+						<a href="javascript:void(0)">
+							<i class="fa fa-bell-o"></i>
+						</a>
+					</div>
+					<div id="header_message">
+						<a href="javascript:void(0)">
+							<i class="fa fa-envelope-o"></i>
+						</a>
+					</div>
+					<div id="header_setting">
+						<a href="javascript:void(0)">
+							<i class="fa fa-gears"></i>
+						</a>
+					</div>
+					<div id="header_login">
+						<div>
+							<a href="javascript:void(0)" id="header_login-left">
+								<span>
+									<img src="./imgs/紫.jpeg" alt="" id="header_login-profilePhoto">
+								</span>
+							</a>
+						</div>
+						<div>
+							<a href="javascript:void(0)" id="header_login-right">
+								<span id="header_login-username">0100</span>
+								<i class="fa fa-caret-down"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<aside>
+			<div id="aside_container">
+				<div id="aside_wrap">
+					<div id="aside_userinfo">
+						<a href="javascript:void(0)">
+							<span>
+								<img src="./imgs/紫.jpeg" alt="" id="aside_userinfo-profilePhoto">
+							</span>
+						</a>
+						<a href="javascript:void(0)">
+							<span>
+								<strong>Lingbai-Wang</strong>
+								<i class="fa fa-caret-down"></i>
+							</span>
+							<span>
+								As time goes by, do you remember what you did?
+							</span>
+						</a>
+					</div>
+					<div class="aside_line"></div>
+					<div id="aside_search">
+						<form action="" method="post">
+							<i class="fa fa-search"></i>
+							<input type="search" placeholder="Search Menu..." id="aside_search-content">
+						</form>
+					</div>
+					<nav id="aside_nav">
+						<ul class="aside_nav-index0">
+							<li class="aside_nav-title">
+								<span>Navigation</span>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<i class="fa fa-home"></i>
+									<span>Home</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<i class="fa fa-snowflake-o"></i>
+									<span>Test</span>
+									<span class="aside_nav-arrow">
+										<i class="fa fa-angle-right"></i>
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<ul class="aside_nav-index1">
+									<li>
+										<a href="javascript:void(0)">
+											<i class="fa fa-snowflake-o"></i>
+											<span>Lorem</span>
+											<span class="aside_nav-arrow">
+												<i class="fa fa-angle-right"></i>
+												<i class="fa fa-angle-down"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<i class="fa fa-snowflake-o"></i>
+											<span>Lorem</span>
+											<span class="aside_nav-arrow">
+												<i class="fa fa-angle-right"></i>
+												<i class="fa fa-angle-down"></i>
+											</span>
+										</a>
+										<ul class="aside_nav-index2">
+											<li>
+												<a href="javascript:void(0)">
+													<i class="fa fa-snowflake-o"></i>
+													<span>Lorem</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<i class="fa fa-snowflake-o"></i>
+													<span>Lorem</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<i class="fa fa-snowflake-o"></i>
+													<span>Lorem</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<i class="fa fa-snowflake-o"></i>
+													<span>Lorem</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<i class="fa fa-snowflake-o"></i>
+													<span>Lorem</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<i class="fa fa-snowflake-o"></i>
+													<span>Lorem</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<i class="fa fa-snowflake-o"></i>
+											<span>Lorem</span>
+											<span class="aside_nav-arrow">
+												<i class="fa fa-angle-right"></i>
+												<i class="fa fa-angle-down"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="aside_line"></div>
+						<ul class="aside_nav-index0">
+							<li class="aside_nav-title">
+								<span>Navigation</span>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<i class="fa fa-wpexplorer"></i>
+									<span>Test</span>
+									<span class="aside_nav-arrow">
+										<i class="fa fa-angle-right"></i>
+										<i class="fa fa-angle-down"></i>
+									</span>
+								</a>
+								<ul class="aside_nav-index1">
+									<li>
+										<a href="javascript:void(0)">
+											<span>Lorem</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<span>Ipsum</span>
+										</a>
+										<ul class="aside_nav-index2">
+											<li>
+												<a href="javascript:void(0)">
+													<span>Alive</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>Enjoy</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>Alive</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>Enjoy</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>Alive</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<span>Enjoy</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<span>Dolor</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</aside>
+		<div id="content">
+			<div id="content_container">
+				<div id="content_alert">
+					<div id="content_alert-content">
+						<i class="fa fa-volume-up"></i>
+						<span id="content_alert-text">
+							由于开启评论审核，所以评论不会立刻出现，请不要重复评论~
+						</span>
+					</div>
+					<button type="button" id="content_alert-btn">
+						<i class="fa fa-close"></i>
+					</button>
+				</div>
+				<div id="content_header">
+					<span id="content_header-title1">0100</span>
+					<span id="content_header-title2">
+						As time goes by, do you remember what you did?
+					</span>
+				</div>
+				<nav id="content_breadcrumb">
+					<ol class="breadcrumb">
+						<li>
+							<a href="javascript:void(0)">Home</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">Blog</a>
+						</li>
+						<li class="active">
+							<a href="javascript:void(0)">Blog Detail</a>
+						</li>
+					</ol>
+				</nav>
+				<div id="content_main">
+					<div id="content_posts">
+						<div class="content_post-1">
+							<div class="content_post-top">
+								<a href="javascript:void(0)">
+									<img src="./imgs/紫.jpeg" alt="">
+								</a>
+							</div>
+							<div class="content_post-bottom">
+								<h2>
+									<a href="javascript:void(0)">Article Heading</a>
+								</h2>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
+								</p>
+								<div>
+									<a href="javascript:void(0)">Keyword</a>
+									<a href="javascript:void(0)">Tag</a>
+									<a href="javascript:void(0)">Post</a>
+								</div>
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<i class="fa fa-globe"></i>
+											<span>2018-02-07</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<i class="fa fa-comments"></i>
+											<span>2 Comments</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<i class="fa fa-share-alt"></i>
+											<span>14 Shares</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<nav id="content_posts-pagination">
+						<ul class="pagination">
+							<li class="disabled">
+								<a href="javascript:void(0)">«</a>
+							</li>
+							<li class="disabled">
+								<a href="javascript:void(0)">‹</a>
+							</li>
+							<li class="active">
+								<a href="javascript:void(0)">1</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">2</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">3</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">4</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">5</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">›</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">»</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div id="content_post-1">
+						<div class="content_post-top">
+							<a href="javascript:void(0)">
+								<img src="./imgs/紫.jpeg" alt="">
+							</a>
+						</div>
+						<div class="content_post-bottom">
+							<h2>
+								<a href="javascript:void(0)">Article Heading</a>
+							</h2>
+							<div class="text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</div>
+							<div class="tag">
+								<a href="javascript:void(0)">Keyword</a>
+								<a href="javascript:void(0)">Tag</a>
+								<a href="javascript:void(0)">Post</a>
+							</div>
+							<ul>
+								<li>
+									<a href="javascript:void(0)">
+										<i class="fa fa-globe"></i>
+										<span>2018-02-07</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										<i class="fa fa-comments"></i>
+										<span>2 Comments</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										<i class="fa fa-share-alt"></i>
+										<span>14 Shares</span>
+									</a>
+								</li>
+							</ul>
+							<hr>
+							<button>Read More</button>
+							<br style="clear: both;">
+						</div>
+					</div>
+					<nav id="content_post-pager">
+						<ul class="pager">
+							<li class="previous">
+								<a href="javascript:void(0)">&larr; Older</a>
+							</li>
+							<li class="next disabled">
+								<a href="javascript:void(0)">Newer &rarr;</a>
+							</li>
+						</ul>
+					</nav>
+					<div id="content_comments">
+						<div id="content_comments-top">
+							<h2>Leave a Comment:</h2>
+							<form action="">
+								<textarea name="" id=""></textarea>
+								<input type="text" placeholder="代号">
+								<input type="text" placeholder="邮箱">
+								<input type="text" placeholder="个站">
+								<button>Submit</button>
+							</form>
+						</div>
+						<div id="content_comments-bottom">
+							<h2>Comments:</h2>
+							<ul class="comment-list">
+								<li class="comment">
+									<div class="comment-left">
+										<a href="javascript:void(0)">
+											<img src="./imgs/紫.jpeg" alt="">
+										</a>
+									</div>
+									<div class="comment-body">
+										<h5>List-based media object</h5>
+										<p>Cras sit amet nibh libero.</p>
+										<div class="comment-info">
+											<span class="comment-floor">#2</span>
+											<span class="comment-time">2018-02-14 20:10</span>
+											<span class="comment-like">
+												<i class="fa fa-thumbs-o-up"></i>
+												<span>13</span>
+											</span>
+											<span class="comment-hate">
+												<i class="fa fa-thumbs-o-down"></i>
+												<span>4</span>
+											</span>
+											<span class="comment-reply">Reply</span>
+											<div class="comment-operation">
+												<i class="fa fa-ellipsis-v"></i>
+											</div>
+										</div>
+										<div class="comment">
+											<div class="comment-left">
+												<a href="javascript:void(0)">
+													<img src="./imgs/紫.jpeg" alt="">
+												</a>
+											</div>
+											<div class="comment-body">
+												<h5>List-based media object</h5>
+												<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+												<div class="comment-info">
+													<span class="comment-floor">#1</span>
+													<span class="comment-time">2018-02-14 20:10</span>
+													<span class="comment-like">
+														<i class="fa fa-thumbs-o-up"></i>
+														<span>13</span>
+													</span>
+													<span class="comment-hate">
+														<i class="fa fa-thumbs-o-down"></i>
+														<span>4</span>
+													</span>
+													<span class="comment-reply">Reply</span>
+													<div class="comment-operation">
+														<i class="fa fa-ellipsis-v"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="comment">
+									<div class="comment-left">
+										<a href="javascript:void(0)">
+											<img src="./imgs/紫.jpeg" alt="">
+										</a>
+									</div>
+									<div class="comment-body">
+										<h5>List-based media object</h5>
+										<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+										<div class="comment-info">
+											<span class="comment-floor">#1</span>
+											<span class="comment-time">2018-02-14 20:10</span>
+											<span class="comment-like">
+												<i class="fa fa-thumbs-o-up"></i>
+												<span>13</span>
+											</span>
+											<span class="comment-hate">
+												<i class="fa fa-thumbs-o-down"></i>
+												<span>4</span>
+											</span>
+											<span class="comment-reply">Reply</span>
+											<div class="comment-operation">
+												<i class="fa fa-ellipsis-v"></i>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<nav class="comment-list-pagination">
+								<ul class="pagination">
+									<li class="disabled">
+										<a href="javascript:void(0)">«</a>
+									</li>
+									<li class="disabled">
+										<a href="javascript:void(0)">‹</a>
+									</li>
+									<li class="active">
+										<a href="javascript:void(0)">1</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">2</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">3</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">4</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">5</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">›</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">»</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="content_aside">
+				<div id="content_aside-time">
+					<span id="content_aside-time-countdown"></span>
+					<span id="content_aside-time-clock"></span>
+				</div>
+				<div id="content_aside-tabs">
+					<div id="content_aside-tabs-top">
+						<ul>
+							<li>
+								<a href="javascript:void(0)" id="content_aside-tabs-top-1">
+									<i class="fa fa-fire"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" id="content_aside-tabs-top-2">
+									<i class="fa fa-comments"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" id="content_aside-tabs-top-3">
+									<i class="fa fa-exchange"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div id="content_aside-tabs-bottom">
+						<div id="content_aside-tabs-bottom-1">
+							<span>热门文章</span>
+							<ul>
+								<li>
+									<a href="javascript:void(0)">
+										<img src="./imgs/紫.jpeg" alt="">
+									</a>
+									<div>
+										<a href="javascript:void(0)" class="content_aside-tabs-articleTitle">
+											<span>Article Title Test Test Test Test Test Test</span>
+										</a>
+										<div class="content_aside-tabs-articleInfo">
+											<span class="content_aside-tabs-commentNum">
+												<i class="fa fa-comments"></i>
+												<span>333</span>
+											</span>
+											<span class="content_aside-tabs-viewNum">
+												<i class="fa fa-eye"></i>
+												<span>233666</span>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="content_aside-tabs-bottom-2">
+							<span>最新评论</span>
+							<ul>
+								<li>
+									<a href="javascript:void(0)">
+										<img src="./imgs/紫.jpeg" alt="">
+									</a>
+									<div>
+										<a href="javascript:void(0)" class="content_aside-tabs-commentAuthor">
+											<span>Comment Author</span>
+										</a>
+										<a href="javascript:void(0)" class="content_aside-tabs-commentText">
+											<span>Comment Text Test Test Test Test Test Test</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="content_aside-tabs-bottom-3">
+							<span>随机文章</span>
+							<ul>
+								<li>
+									<a href="javascript:void(0)">
+										<img src="./imgs/紫.jpeg" alt="">
+									</a>
+									<div>
+										<a href="javascript:void(0)" class="content_aside-tabs-articleTitle">
+											<span>Article Title Test Test Test Test Test Test</span>
+										</a>
+										<div class="content_aside-tabs-articleInfo">
+											<span class="content_aside-tabs-commentNum">
+												<i class="fa fa-comments"></i>
+												<span>333</span>
+											</span>
+											<span class="content_aside-tabs-viewNum">
+												<i class="fa fa-eye"></i>
+												<span>233666</span>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="content_aside-category"></div>
+				<div id="content_aside-tagCloud">
+					<span>标签云</span>
+					<div>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码Test</a>
+						<a href="javascript:void(0)">代码Test</a>
+						<a href="javascript:void(0)">代码Test</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+						<a href="javascript:void(0)">代码</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div>
+				<span>© 2017 Memory-Cloister by 0100</span>
+			</div>
+		</footer>
+	</div>
+	<div id="panel">
+		<button id="panel_btn">
+			<i class="fa fa-cog fa-spin"></i>
+		</button>
+		<div id="panel_header">
+			<span>Setting</span>
+			<button id="panel_btn-0">Reset</button>
+		</div>
+		<div id="panel_body">
+			<div>
+				<span>Fix header</span>
+				<span class="panel_toggle" id="panel_btn-header">
+					<i class="fa fa-toggle-off"></i>
+					<i class="fa fa-toggle-on"></i>
+				</span>
+			</div>
+			<div>
+				<span>Fix sidebar</span>
+				<span class="panel_toggle" id="panel_btn-sidebar">
+					<i class="fa fa-toggle-off"></i>
+					<i class="fa fa-toggle-on"></i>
+				</span>
+			</div>
+			<div>
+				<span>Box model</span>
+				<span class="panel_toggle" id="panel_btn-box">
+					<i class="fa fa-toggle-off"></i>
+					<i class="fa fa-toggle-on"></i>
+				</span>
+			</div>
+			<div>
+				<span>Nav style 1</span>
+				<span class="panel_toggle" id="panel_btn-nav1">
+					<i class="fa fa-toggle-off"></i>
+					<i class="fa fa-toggle-on"></i>
+				</span>
+			</div>
+			<div>
+				<span>Nav style 2</span>
+				<span class="panel_toggle" id="panel_btn-nav2">
+					<i class="fa fa-toggle-off"></i>
+					<i class="fa fa-toggle-on"></i>
+				</span>
+			</div>
+			<div>
+				<span>Nav style 3</span>
+				<span class="panel_toggle" id="panel_btn-nav3">
+					<i class="fa fa-toggle-off"></i>
+					<i class="fa fa-toggle-on"></i>
+				</span>
+			</div>
+		</div>
+		<div id="theme_container">
+			
+		</div>
+	</div>
+</body>
+</html>
