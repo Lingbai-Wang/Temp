@@ -16,8 +16,8 @@ public class ContentServiceImpl implements ContentService{
 	private ContentMapper contentMapper;
 	
 	@Override
-	public List<Content> selectAll() {
-		return contentMapper.selectAll();
+	public List<Content> selectAll(Integer cid) {
+		return contentMapper.selectAll(cid);
 	}
 
 }

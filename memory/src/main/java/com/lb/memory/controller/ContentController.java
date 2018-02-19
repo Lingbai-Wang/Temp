@@ -20,9 +20,9 @@ public class ContentController {
 
 	@RequestMapping(value="/selectPost")
 	@ResponseBody
-	public List<Content> selectUserMessage(@RequestParam Integer in){
+	public List<Content> selectUserMessage(@RequestParam Integer cid){
 		
-		List<Content> list = service.selectAll();
+		List<Content> list = service.selectAll(cid);
 		System.out.println(list);
 		return list;
 		

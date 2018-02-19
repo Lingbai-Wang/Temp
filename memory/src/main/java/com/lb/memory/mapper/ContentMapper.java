@@ -6,5 +6,5 @@ import com.lb.memory.pojo.Content;
 
 public interface ContentMapper {
 
-	List<Content> selectAll();
+	List<Content> selectAll(Integer cid);
 }

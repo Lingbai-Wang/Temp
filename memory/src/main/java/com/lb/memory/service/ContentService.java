@@ -6,6 +6,6 @@ import com.lb.memory.pojo.Content;
 
 public interface ContentService {
 
-	public abstract List<Content> selectAll();
+	public abstract List<Content> selectAll(Integer cid);
 	
 }
