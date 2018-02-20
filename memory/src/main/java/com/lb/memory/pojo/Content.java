@@ -1,5 +1,7 @@
 package com.lb.memory.pojo;
 
+import java.util.ArrayList;
+
 public class Content {
 
 	private Integer cid;
@@ -35,6 +37,12 @@ public class Content {
 	private String allowFeed;
 	
 	private Integer parent;
+	
+	private ArrayList<Integer> pagination;
+	
+	private Integer lastPageNumber;
+	
+	private Integer rowCount;
 
 	public Integer getCid() {
 		return cid;
@@ -170,6 +178,30 @@ public class Content {
 
 	public void setParent(Integer parent) {
 		this.parent = parent;
+	}
+
+	public ArrayList<Integer> getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(ArrayList<Integer> pagination) {
+		this.pagination = pagination;
+	}
+
+	public Integer getLastPageNumber() {
+		return lastPageNumber;
+	}
+
+	public void setLastPageNumber(Integer lastPageNumber) {
+		this.lastPageNumber = lastPageNumber;
+	}
+
+	public Integer getRowCount() {
+		return rowCount;
+	}
+
+	public void setRowCount(Integer rowCount) {
+		this.rowCount = rowCount;
 	}
 
 	@Override

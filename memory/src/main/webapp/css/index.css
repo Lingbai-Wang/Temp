@@ -610,6 +610,14 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	line-height: 30px;
 	color: #23b7e5;
 }
+.pagination li span{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 30px;
+	color: #23b7e5;
+}
 .pagination li:hover{
 	background-color: #F5F5F5;
 }
@@ -740,13 +748,23 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	text-decoration: none;
 	color: #428bca;
 }
-.pager .previous a{
+.pager li span{
+	display: inline-block;
+	padding: 5px 14px;
+	background-color: #FFF;
+	border: 1px #ddd solid;
+	border-radius: 15px;
+	color: #428bca;
+}
+.pager .previous a,
+.pager .previous span{
 	float: left;
 }
-.pager .next a{
+.pager .next a,
+.pager .next span{
 	float: right;
 }
-.pager .disabled a{
+.pager .disabled span{
 	color: #777;
 }
 #content_main #content_comments{

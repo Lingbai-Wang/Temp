@@ -4,8 +4,19 @@
 
 	<select id="selectAll" resultType="com.lb.memory.pojo.Content">
 		select * from blog_contents
-		<if test="_parameter!=null">
-			where cid = #{_parameter,jdbcType=INTEGER}
+		<if test="cid!=null">
+			where cid = #{cid}
+		</if>
+		<if test="cid==null">
+			order by created desc,cid desc
+		</if>
+		<if test="cid==null and start!=null and count!=null">
+			limit #{start},#{count}
 		</if>
 	</select>
+	
+	<select id="selectRowCount" resultType="Integer">
+		select count(*) from blog_contents
+	</select>
+	
 </mapper>
