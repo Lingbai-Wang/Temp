@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lb.memory.mapper.CommentMapper">
+
+	<select id="selectAll" resultType="com.lb.memory.pojo.Comment">
+		select * from blog_comments
+		<if test="cid!=null and ancestor!=null">
+			where cid = #{cid} and ancestor = #{ancestor}
+		</if>
+		<if test="cid!=null">
+			order by created desc,coid desc
+		</if>
+		<if test="start!=null and count!=null and start>=0">
+			limit #{start},#{count}
+		</if>
+	</select>
+	
+	<select id="selectRowCount" resultType="Integer">
+		select count(*) from blog_comments
+		<if test="cid!=null and ancestor!=null">
+			where cid = #{cid} and ancestor = #{ancestor}
+		</if>
+	</select>
+	
+	<insert id="insert">
+		insert into blog_comments(text,author,mail,url,cid,created,parent,ancestor) values(#{text},#{author},#{mail},#{url},#{cid},#{created},#{parent},#{ancestor});
+	</insert>
+	
+</mapper>

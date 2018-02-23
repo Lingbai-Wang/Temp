@@ -772,16 +772,16 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	background-color: #FFF;
 	border: 1px #EEE solid;
 }
-#content_comments #content_comments-top{
+#content_comments .content_comments-top{
 	margin-bottom: 20px;
 }
-#content_comments-top h2{
+.content_comments-top h2{
 	font-weight: 300;
 	font-size: 1.125rem;
 	margin: 0 0 20px;
 	color: #9ea7b3;
 }
-#content_comments-top form textarea{
+.content_comments-top textarea{
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
@@ -792,7 +792,7 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	outline: none;
 	margin-bottom: 13px;
 }
-#content_comments-top form input{
+.content_comments-top input{
 	box-sizing: border-box;
 	width: 29%;
 	height: 26px;
@@ -800,7 +800,7 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	border: 1px #e5e9ef solid;
 	outline: none;
 }
-#content_comments-top form button{
+.content_comments-top button{
 	padding: 6px 12px;
 	border: 0px;
 	outline: none;
